@@ -1,0 +1,28 @@
+{
+  "name": "great-reports",
+  "version": "1.0.0",
+  "description": "A wonderful Javascript library to make great reports.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianojsjr/reportjs.git"
+  },
+  "keywords": [
+    "javascript",
+    "report",
+    "business"
+  ],
+  "author": "Luciano José",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucianojsjr/reportjs/issues"
+  },
+  "homepage": "https://github.com/lucianojsjr/reportjs#readme",
+  "dependencies": {
+    "html-pdf": "^2.2.0",
+    "moment": "^2.22.1"
+  }
+}
