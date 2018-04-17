@@ -1,5 +1,5 @@
 const fs = require('fs');
-const GreatReport = require('../lib/great-report');
+const GreatReportsPDF = require('../index').pdf;
 
 const getColumns = () => {
 	return [{
@@ -10,13 +10,13 @@ const getColumns = () => {
 		name: 'Company'
 	}, {
 		name: 'User Name'
-	}]
+	}];
 };
 
 const getValues = () => {
 	let values = [];
 	
-	for (let rowNumber = 0; rowNumber < 330; rowNumber++) {
+	for (let rowNumber = 0; rowNumber < 300; rowNumber++) {
 		values.push({
 			name: `Row ${rowNumber}`,
 			date: '2010-10-12',
@@ -31,22 +31,18 @@ const getValues = () => {
 };
 
 const createReport = () => {
-	let greatReport;
-	
 	fs.readFile('../templates/simple.html', 'utf-8', (err, data) => {
-		greatReport = new GreatReport(data);
+		GreatReportsPDF.init(data);
 		
-		greatReport.config({
+		GreatReportsPDF.config({
 			charset: 'utf-8',
-			title: 'New Report'
+			title: 'New Report',
+			show_footer: true
 		});
 		
-		greatReport.renderHeader({
-			report_name: 'New Report'
-		});
-		
-		greatReport.renderTable(getColumns(), getValues(), ['name', 'date', 'company_name', 'user.name']);
-		greatReport.create('./simple.pdf').then(data => console.log(data)).catch(err => console.log(err));
+		GreatReportsPDF.renderTable(getColumns(), getValues(), ['name', 'date', 'company_name', 'teste']);
+		GreatReportsPDF.create('./simple.pdf').then(data => console.log(data))
+		.catch(err => console.log(err));
 	});
 };
 
