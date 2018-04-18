@@ -4,9 +4,8 @@
         <meta charset="{{charset}}">
         <title>{{title}}</title>
         <style>
-            html,
             body {
-                width: 99%;
+                width: 99.99%;
                 margin: 0;
                 padding: 0;
                 font-size: 13px;
@@ -43,7 +42,7 @@
             }
 
             .footer {
-                text-align: center;
+                margin-top: 13px;
             }
         </style>
     </head>
@@ -52,13 +51,6 @@
             <p>{{report_name}}</p>
         </div>
         <div class="clearfix"></div>
-        <table class="default-table">
-            <thead>
-                {{table_head}}
-            </thead>
-            <tbody>
-                {{table_body}}
-            </tbody>
-        </table>
+        {{table}}
     </body>
 </html>

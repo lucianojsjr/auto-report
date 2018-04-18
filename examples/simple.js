@@ -40,7 +40,8 @@ const createReport = () => {
 			show_footer: true
 		});
 		
-		GreatReportsPDF.renderTable(getColumns(), getValues(), ['name', 'date', 'company_name', 'teste']);
+		GreatReportsPDF.render('report_name', 'New Report Name');
+		GreatReportsPDF.renderTable(getColumns(), getValues(), ['name', 'date', 'company_name', 'user.name']);
 		GreatReportsPDF.create('./simple.pdf').then(data => console.log(data))
 		.catch(err => console.log(err));
 	});
