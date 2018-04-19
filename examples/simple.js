@@ -32,16 +32,29 @@ const getValues = () => {
 
 const createReport = () => {
 	fs.readFile('../templates/simple.html', 'utf-8', (err, data) => {
-		GreatReportsPDF.init(data);
+		const columns = [{
+			name: 'Name'
+		}, {
+			name: 'Age'
+		}, {
+			name: 'Country'
+		}];
+		const rows = [
+			['Mário', 12, 'BR'],
+			['Martin', 23, 'US'],
+			['Jacque', 22, 'FR']
+		];
 		
+		GreatReportsPDF.init(data);
 		GreatReportsPDF.config({
 			charset: 'utf-8',
-			title: 'New Report',
-			show_footer: true
+			title: 'New Report'
 		});
 		
 		GreatReportsPDF.render('report_name', 'New Report Name');
-		GreatReportsPDF.renderTable(getColumns(), getValues(), ['name', 'date', 'company_name', 'user.name']);
+		GreatReportsPDF.renderTable(columns, rows, {
+			tag: 'table' //The tag that should be replaced.
+		});
 		GreatReportsPDF.create('./simple.pdf').then(data => console.log(data))
 		.catch(err => console.log(err));
 	});
