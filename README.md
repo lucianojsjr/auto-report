@@ -158,7 +158,6 @@ or translating any document here to your language.
 
 ## RoadMap
 
-* Add default styles based on Bootstrap.
 * Set up tests.
 * Create advanced examples.
 * Publish to NPM.
