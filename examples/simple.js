@@ -1,5 +1,6 @@
 const fs = require('fs');
-const GreatReportsPDF = require('../index').pdf;
+const GreatReports = require('../index');
+const GreatReportsPDF = new GreatReports.PDF();
 
 const getColumns = () => {
 	return [{

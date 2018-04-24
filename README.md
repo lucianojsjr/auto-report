@@ -61,7 +61,8 @@ We will use the following HTML.
 
 ```javascript
 const template = '<html>...'; // Template defined above. 
-const GreatReportsPDF = require('great-reports').pdf;
+const GreatReports = require('great-reports');
+const GreatReportsPDF = new GreatReports.PDF();
 
 GreatReportsPDF.init(template);
 GreatReportsPDF.config({
@@ -78,7 +79,8 @@ GreatReportsPDF.create('your-path/file.pdf').then(data => console.log(data)).cat
 
 ```javascript
 const template = '<html>...'; // Template defined above. 
-const GreatReportsPDF = require('great-reports').pdf;
+const GreatReports = require('great-reports');
+const GreatReportsPDF = new GreatReports.PDF();
 
 const columns = [{
     name: 'Name'
@@ -149,7 +151,7 @@ GreatReportsPDF.create('your-path/file.pdf').then(data => console.log(data)).cat
 
 ### More examples
 
-For more example please check the [__Docs__](https://www.google.com/).
+For more example please check the [__Docs__](http://lucianojose.com/).
 
 ## Contributing
 
@@ -158,7 +160,6 @@ or translating any document here to your language.
 
 ## RoadMap
 
-* Set up tests.
 * Create advanced examples.
 * Publish to NPM.
 * Create CONTRIBUTING.md to define the contributing flow.
