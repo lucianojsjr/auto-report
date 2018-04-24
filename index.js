@@ -1,7 +1,7 @@
 const GreatReportsPDF = require('./lib/pdf/great-reports-pdf');
 
 const GreatReports = {
-	pdf: GreatReportsPDF
+	PDF: GreatReportsPDF
 };
 
 module.exports = GreatReports;
