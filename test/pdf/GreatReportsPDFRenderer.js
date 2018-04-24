@@ -1,7 +1,8 @@
 const expect = require('chai').expect;
-const GreatReportsPDFRenderer = require('../lib/pdf/great-reports-pdf-renderer');
+let PDFRenderer = require('../../lib/pdf/great-reports-pdf-renderer');
+let GreatReportsPDFRenderer = new PDFRenderer();
 
-describe('GreatReportsPDFRendererRenderer module', () => {
+describe('GreatReportsPDFRenderer module', () => {
 	it('Should be an object', () => {
 		expect(GreatReportsPDFRenderer).to.be.a('object');
 	});
@@ -24,6 +25,21 @@ describe('GreatReportsPDFRendererRenderer module', () => {
 		
 		GreatReportsPDFRenderer.setTemplate(secondTemplate);
 		expect(GreatReportsPDFRenderer.getTemplate()).to.equal(secondTemplate);
+	});
+	
+	it('Should support multiple instances', () => {
+		const template = '{{@element}}';
+		const firstInstance = new PDFRenderer();
+		const secondInstance = new PDFRenderer();
+		
+		firstInstance.setTemplate(template);
+		secondInstance.setTemplate(template);
+		
+		firstInstance.render('element', 'instance1');
+		secondInstance.render('element', 'instance2');
+		
+		expect(firstInstance.getTemplate()).to.equal('instance1');
+		expect(secondInstance.getTemplate()).to.equal('instance2');
 	});
 	
 	it('Should render a tag', () => {

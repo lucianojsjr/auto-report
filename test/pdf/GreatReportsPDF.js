@@ -1,9 +1,8 @@
-const GreatReportsPDF = require('../index').pdf;
 const expect = require('chai').expect;
+const GreatReports = require('../../index');
+const GreatReportsPDF = new GreatReports.PDF();
 
 describe('GreatReportsPDF module', () => {
-	const template = '{{@element}}';
-	
 	it('Should be an object', () => {
 		expect(GreatReportsPDF).to.be.a('object');
 	});
@@ -20,14 +19,15 @@ describe('GreatReportsPDF module', () => {
 	it('Should create the pdf', () => {
 		let create;
 		let filePath;
+		const template = '{{@element}}';
 		
 		filePath = './test.pdf';
-
+		
 		GreatReportsPDF.init(template);
 		create = GreatReportsPDF.create(filePath);
 		
 		expect(create.then).to.be.a('function');
 		expect(create.catch).to.be.a('function');
-		create.then(response => expect(response).to.have.own.property('filename'));
+		create.then(response => expect(response).to.have.own.property('status' ));
 	});
 });
