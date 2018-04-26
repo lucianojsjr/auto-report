@@ -10,5 +10,6 @@ examples/
 templates/
 
 # Others
+TODO
 test/
 .npmignore

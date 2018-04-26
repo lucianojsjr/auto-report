@@ -1,16 +1,16 @@
-<h1 align="center">
-  <br>
-   <img width="auto" height="180" src="https://cdn.iconscout.com/public/images/icon/free/png-512/financial-analysis-report-card-reporting-valuation-3e6ec64bf68be326-512x512.png" alt="Logo AutoReport" title="Logo AutoReport" />
-  <br>
-</h1>
+<p align="center">
+   <img width="180" height="180" src="https://cdn.iconscout.com/public/images/icon/free/png-512/financial-analysis-report-card-reporting-valuation-3e6ec64bf68be326-512x512.png" alt="Logo AutoReport" title="Logo AutoReport" />
+</p>
+
+---
+
 <p align="center">  
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
 
 <p align="center">
   This repository contains the <strong>AutoReport</strong> source code.
-  </br>
- <strong>AutoReport</strong> is a library to generate personalized PDF and XLS reports.
+  <strong>AutoReport</strong> is a library to generate personalized PDF and XLS reports.
 </p>
 
 ## Table of contents
@@ -152,7 +152,7 @@ AutoReportPDF.create('your-path/file.pdf').then(data => console.log(data)).catch
 
 ### More examples
 
-For more example please check the [__Docs__](http://lucianojose.com/).
+Other examples will be created soon in addition to the complete documentation.
 
 ## Contributing
 
