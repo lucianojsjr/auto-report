@@ -10,6 +10,7 @@
 
 <p align="center">
   This repository contains the <strong>AutoReport</strong> source code.
+   </br>
   <strong>AutoReport</strong> is a library to generate personalized PDF and XLS reports.
 </p>
 
