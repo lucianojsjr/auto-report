@@ -1,0 +1,14 @@
+# IntelliJ Filles
+*.iml
+.idea/
+
+# Node Packages
+node_modules/
+
+# Examples and Templates
+examples/
+templates/
+
+# Others
+test/
+.npmignore
