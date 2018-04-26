@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-let PDFRenderer = require('../../lib/pdf/auto-report-pdf-renderer');
+const PDFRenderer = require('../../lib/pdf/auto-report-pdf-renderer');
 let AutoReportPDFRenderer = new PDFRenderer();
 
 describe('AutoReportPDFRenderer module', () => {
