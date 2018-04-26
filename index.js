@@ -1,7 +1,7 @@
-const GreatReportsPDF = require('./lib/pdf/great-reports-pdf');
+const AutoReportPDF = require('./lib/pdf/auto-report-pdf');
 
-const GreatReports = {
-	PDF: GreatReportsPDF
+const AutoReport = {
+	PDF: AutoReportPDF
 };
 
-module.exports = GreatReports;
+module.exports = AutoReport;

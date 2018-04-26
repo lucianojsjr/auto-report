@@ -1,8 +1,8 @@
 {
-  "name": "great-reports",
+  "name": "auto-report",
   "version": "1.0.0",
   "description": "A wonderful Javascript library to make great reports.",
-  "homepage": "https://github.com/lucianojsjr/great-reports#readme",
+  "homepage": "https://github.com/lucianojsjr/auto-report#readme",
   "author": "Luciano José <luciano.jsjr@gmail.com>",
   "keywords": [
     "javascript",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucianojsjr/great-reports.git"
+    "url": "git+https://github.com/lucianojsjr/auto-report.git"
   },
   "bugs": {
-    "url": "https://github.com/lucianojsjr/great-reports/issues"
+    "url": "https://github.com/lucianojsjr/auto-report/issues"
   },
   "license": "MIT",
   "dependencies": {

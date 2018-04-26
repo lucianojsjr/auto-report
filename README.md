@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-   <img width="auto" height="180" src="https://cdn.iconscout.com/public/images/icon/free/png-512/financial-analysis-report-card-reporting-valuation-3e6ec64bf68be326-512x512.png" alt="Logo GreatReports" title="Logo GreatReports" />
+   <img width="auto" height="180" src="https://cdn.iconscout.com/public/images/icon/free/png-512/financial-analysis-report-card-reporting-valuation-3e6ec64bf68be326-512x512.png" alt="Logo AutoReport" title="Logo AutoReport" />
   <br>
 </h1>
 <p align="center">  
@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  This repository contains the <strong>GreatReports</strong> source code.
-  GreatReports is a library to generate personalized PDF and XLS reports.
+  This repository contains the <strong>AutoReport</strong> source code.
+  AutoReport is a library to generate personalized PDF and XLS reports.
 </p>
 
 ## Table of contents
@@ -27,18 +27,18 @@
 <h2 id="installation">Installation</h2>
 
 ```bash
-npm install great-reports --save
+npm install auto-report --save
 ```
 
 Import it to your code using:
 
 ```javascript
-const GreatReports = require("great-reports");
+const AutoReport = require("auto-report");
 ```
 
 ## Examples
 
-`GreatReports` use HTML with tags to generate the PDF. For the examples below 
+`AutoReport` use HTML with tags to generate the PDF. For the examples below 
 We will use the following HTML.
 
 ```html
@@ -61,26 +61,26 @@ We will use the following HTML.
 
 ```javascript
 const template = '<html>...'; // Template defined above. 
-const GreatReports = require('great-reports');
-const GreatReportsPDF = new GreatReports.PDF();
+const AutoReport = require('auto-report');
+const AutoReportPDF = new AutoReport.PDF();
 
-GreatReportsPDF.init(template);
-GreatReportsPDF.config({
+AutoReportPDF.init(template);
+AutoReportPDF.config({
     charset: 'utf-8',
     title: 'New Report'
 });
 
-GreatReportsPDF.render('report_name', 'New Report Name');
+AutoReportPDF.render('report_name', 'New Report Name');
 
-GreatReportsPDF.create('your-path/file.pdf').then(data => console.log(data)).catch(err => console.log(err));
+AutoReportPDF.create('your-path/file.pdf').then(data => console.log(data)).catch(err => console.log(err));
 ```
 
 ### Example 2) Render a table:
 
 ```javascript
 const template = '<html>...'; // Template defined above. 
-const GreatReports = require('great-reports');
-const GreatReportsPDF = new GreatReports.PDF();
+const AutoReport = require('auto-report');
+const AutoReportPDF = new AutoReport.PDF();
 
 const columns = [{
     name: 'Name'
@@ -96,17 +96,17 @@ const rows = [
     ['Jacque', 22, 'FR']
 ];
 
-GreatReportsPDF.init(template);
-GreatReportsPDF.config({
+AutoReportPDF.init(template);
+AutoReportPDF.config({
     charset: 'utf-8',
     title: 'New Report'
 });
 
-GreatReportsPDF.renderTable(columns, rows, {
+AutoReportPDF.renderTable(columns, rows, {
     tag: 'table' //The tag that should be replaced.
 });
 
-GreatReportsPDF.create('your-path/file.pdf').then(data => console.log(data)).catch(err => console.log(err));
+AutoReportPDF.create('your-path/file.pdf').then(data => console.log(data)).catch(err => console.log(err));
 
 ```
 
@@ -135,18 +135,18 @@ const rows = [{
     country: 'FR'
 }];
 
-GreatReportsPDF.init(template);
-GreatReportsPDF.config({
+AutoReportPDF.init(template);
+AutoReportPDF.config({
     charset: 'utf-8',
     title: 'New Report'
 });
 
-GreatReportsPDF.renderTable(columns, rows, {
+AutoReportPDF.renderTable(columns, rows, {
     tag: 'table', //The tag that should be replaced.,
     properties: ['name', 'user_age', 'country'] //Properties to access row object
 });
 
-GreatReportsPDF.create('your-path/file.pdf').then(data => console.log(data)).catch(err => console.log(err));
+AutoReportPDF.create('your-path/file.pdf').then(data => console.log(data)).catch(err => console.log(err));
 ```
 
 ### More examples

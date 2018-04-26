@@ -1,6 +1,6 @@
 const fs = require('fs');
-const GreatReports = require('../index');
-const GreatReportsPDF = new GreatReports.PDF();
+const AutoReport = require('../index');
+const AutoReportPDF = new AutoReport.PDF();
 
 const getColumns = () => {
 	return [{
@@ -46,17 +46,18 @@ const createReport = () => {
 			['Jacque', 22, 'FR']
 		];
 		
-		GreatReportsPDF.init(data);
-		GreatReportsPDF.config({
+		AutoReportPDF.init(data);
+		AutoReportPDF.config({
 			charset: 'utf-8',
-			title: 'New Report'
+			title: 'New Report',
+			show_footer: true
 		});
 		
-		GreatReportsPDF.render('report_name', 'New Report Name');
-		GreatReportsPDF.renderTable(columns, rows, {
+		AutoReportPDF.render('report_name', 'New Report Name');
+		AutoReportPDF.renderTable(columns, rows, {
 			tag: 'table' //The tag that should be replaced.
 		});
-		GreatReportsPDF.create('./simple.pdf').then(data => console.log(data))
+		AutoReportPDF.create('./simple.pdf').then(data => console.log(data))
 		.catch(err => console.log(err));
 	});
 };
