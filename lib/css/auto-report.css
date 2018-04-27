@@ -1,0 +1,27 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.footer {
+    color: #9e9e9e;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 8px;
+    border-top: 1px solid #9e9e9e;
+}
