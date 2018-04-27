@@ -21,7 +21,7 @@ describe('AutoReportPDF module', () => {
 		let filePath;
 		const template = '{{@element}}';
 		
-		filePath = './test.pdf';
+		filePath = './test/test.pdf';
 		
 		AutoReportPDF.init(template);
 		create = AutoReportPDF.create(filePath);
