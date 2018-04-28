@@ -166,7 +166,6 @@ or translating any document here to your language.
 * Publish to NPM.
 * Create CONTRIBUTING.md to define the contributing flow.
 * Create project site.
-* Remove HTML-PDF dependency.
 
 ## License
 
