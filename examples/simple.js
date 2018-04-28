@@ -47,15 +47,10 @@ const createReport = () => {
 		];
 		
 		AutoReportPDF.init(data);
-		AutoReportPDF.config({
-			charset: 'utf-8',
-			title: 'New Report',
-			show_footer: true
-		});
-		
 		AutoReportPDF.render('report_name', 'New Report Name');
 		AutoReportPDF.renderTable(columns, rows, {
-			tag: 'table' //The tag that should be replaced.
+			tag: 'table',
+			class: 'table table-striped'
 		});
 		AutoReportPDF.create('./simple.pdf').then(data => console.log(data))
 		.catch(err => console.log(err));
