@@ -47,8 +47,6 @@ We will use the following HTML.
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="{{#charset}}">
-        <title>{{#title}}</title>
     </head>
     <body>
         <div>
@@ -67,10 +65,6 @@ const AutoReport = require('auto-report');
 const AutoReportPDF = new AutoReport.PDF();
 
 AutoReportPDF.init(template);
-AutoReportPDF.config({
-    charset: 'utf-8',
-    title: 'New Report'
-});
 
 AutoReportPDF.render('report_name', 'New Report Name');
 
@@ -99,10 +93,6 @@ const rows = [
 ];
 
 AutoReportPDF.init(template);
-AutoReportPDF.config({
-    charset: 'utf-8',
-    title: 'New Report'
-});
 
 AutoReportPDF.renderTable(columns, rows, {
     tag: 'table' //The tag that should be replaced.
@@ -138,10 +128,6 @@ const rows = [{
 }];
 
 AutoReportPDF.init(template);
-AutoReportPDF.config({
-    charset: 'utf-8',
-    title: 'New Report'
-});
 
 AutoReportPDF.renderTable(columns, rows, {
     tag: 'table', //The tag that should be replaced.,
