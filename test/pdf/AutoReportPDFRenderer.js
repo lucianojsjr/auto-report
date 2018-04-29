@@ -10,8 +10,6 @@ describe('AutoReportPDFRenderer module', () => {
 	it('Should has render functions', () => {
 		expect(AutoReportPDFRenderer.setTemplate).to.be.a('function');
 		expect(AutoReportPDFRenderer.getTemplate).to.be.a('function');
-		expect(AutoReportPDFRenderer.addCSS).to.be.a('function');
-		expect(AutoReportPDFRenderer.renderFooter).to.be.a('function');
 		expect(AutoReportPDFRenderer.renderTable).to.be.a('function');
 		expect(AutoReportPDFRenderer.renderGroupedTable).to.be.a('function');
 	});
@@ -50,15 +48,5 @@ describe('AutoReportPDFRenderer module', () => {
 		AutoReportPDFRenderer.render('element', value);
 		
 		expect(AutoReportPDFRenderer.getTemplate()).to.equal(value);
-	});
-	
-	it('Should render styles', () => {
-		const css = '.test-class { "background-color":red"; }';
-		const templateWithStyle = '<html><head>{{#css}}</head></html>';
-		
-		AutoReportPDFRenderer.setTemplate(templateWithStyle);
-		AutoReportPDFRenderer.addCSS(css);
-		
-		expect(AutoReportPDFRenderer.getTemplate()).to.have.string(css);
 	});
 });
