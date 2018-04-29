@@ -47,13 +47,18 @@ const createReport = () => {
 		];
 		
 		AutoReportPDF.init(data);
+		AutoReportPDF.config({
+			charset: 'utf-8',
+			title: 'New Report',
+			css: ['./simple.css']
+		});
 		AutoReportPDF.render('report_name', 'New Report Name');
 		AutoReportPDF.renderTable(columns, rows, {
 			tag: 'table',
 			class: 'table table-striped'
 		});
 		AutoReportPDF.create('./simple.pdf').then(data => console.log(data))
-		.catch(err => console.log(err));
+		  .catch(err => console.log(err));
 	});
 };
 
