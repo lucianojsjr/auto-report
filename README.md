@@ -146,13 +146,6 @@ Other examples will be created soon in addition to the complete documentation.
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
 or translating any document here to your language.
 
-## RoadMap
-
-* Create advanced examples.
-* Publish to NPM.
-* Create CONTRIBUTING.md to define the contributing flow.
-* Create project site.
-
 ## License
 
 [MIT](LICENSE)
