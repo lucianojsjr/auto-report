@@ -29,7 +29,7 @@ describe('AutoReportPDF module', () => {
 		const filepath = `${__dirname}/../../lib/css/auto-report.css`;
 		
 		AutoReportPDF.config({
-			css: [filepath]
+			style: [filepath]
 		});
 		
 		AutoReportPDF.addStyle((error, template) => {

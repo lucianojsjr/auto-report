@@ -17,10 +17,12 @@ const getColumns = () => {
 const getValues = () => {
 	let values = [];
 	
-	for (let rowNumber = 1; rowNumber < 80; rowNumber++) {
+	for (let rowNumber = 1; rowNumber < 2; rowNumber++) {
 		values.push({
 			date: '10/10/2010',
-			name: `Sr(a). Number ${rowNumber}`,
+			user: {
+				name: `Sr(a). Number ${rowNumber}`
+			},
 			itens: `${rowNumber + 1} Shoes,${rowNumber + 2} Glass, and ${rowNumber + 3} Pants`,
 			price: `R$ ${(rowNumber * 1.12).toFixed(2)}`
 		});
@@ -34,7 +36,7 @@ const createReport = () => {
 		AutoReportPDF.init(template);
 		AutoReportPDF.config({
 			charset: 'utf-8',
-			css: ['./pdf-table.css']
+			style: ['./pdf-table.css']
 		});
 		
 		AutoReportPDF.render('company_name', 'Custom Company');
@@ -45,7 +47,7 @@ const createReport = () => {
 		AutoReportPDF.renderTable(getColumns(), getValues(), {
 			tag: 'table',
 			class: 'default-table',
-			properties: ['date', 'name', 'itens', 'price']
+			properties: ['date', 'user.name', 'itens', 'price']
 		});
 		
 		AutoReportPDF.create('./pdf-table.pdf').then(data => console.log(data))
