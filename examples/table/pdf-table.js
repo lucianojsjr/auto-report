@@ -36,7 +36,11 @@ const createReport = () => {
 		AutoReportPDF.init(template);
 		AutoReportPDF.config({
 			charset: 'utf-8',
-			style: ['./pdf-table.css']
+			style: ['./pdf-table.css'],
+			footer: {
+				height: '35px',
+				template: '<p style="width: auto;border: 1px solid red;font-size: 10px; padding-top: 5px; margin-bottom: -10px">Pages {{ @page }} of {{ @pages }}</p>'
+			}
 		});
 		
 		AutoReportPDF.render('company_name', 'Custom Company');
