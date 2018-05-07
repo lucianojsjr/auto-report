@@ -1,0 +1,84 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: auto;
+    height: auto;
+    background-color: white;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    font-size: 8px;
+    line-height: 10px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    /*padding: 2.4px 3px 0; */
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table td.aright {
+    text-align: right;
+}
+
+table.default-table > tbody > tr:nth-child(even) > td {
+    background-color: #F9F9F9;
+}
+
+table tr > th {
+    border: none;
+    padding-bottom: 3px;
+}
+
+table tr > td {
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
+    border-color: #efefef;
+    padding: 5px;
+}
+
+.default-table {
+    margin-top: 20px;
+}
+
+.default-table th {
+    padding: 5px;
+}
+
+.header {
+    position: relative;
+}
+
+.company-name {
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.report-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo {
+    max-width: 40px;
+    max-height: 40px;
+    float: right;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+}
